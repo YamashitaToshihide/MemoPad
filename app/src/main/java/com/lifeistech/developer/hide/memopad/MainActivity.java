@@ -10,6 +10,8 @@ import android.view.View;
 public class MainActivity extends AppCompatActivity {
     boolean isFirst=true;
 
+    int num = 0;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
