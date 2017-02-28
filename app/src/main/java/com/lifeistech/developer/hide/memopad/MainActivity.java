@@ -6,11 +6,12 @@ import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
     boolean isFirst=true;
 
-    int num = 0;
+    TextView textView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
