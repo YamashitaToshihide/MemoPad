@@ -7,8 +7,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.lifeistech.developer.hide.memopad.MemoActivity"
-    android:onClick="save">
+    tools:context="com.lifeistech.developer.hide.memopad.MemoActivity">
 
     <LinearLayout
         android:orientation="vertical"
@@ -19,7 +18,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textPersonName"
-            android:text="Name"
             android:ems="10"
             android:id="@+id/title"
             android:singleLine="true"
@@ -36,7 +34,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textMultiLine|textPersonName"
-            android:text="Name"
             android:ems="10"
             android:id="@+id/content"
             android:hint="本文を入力してください" />
@@ -49,5 +46,7 @@
             android:onClick="save"
             android:background="#6cbde6"
             android:textColor="@android:color/white" />
+
     </LinearLayout>
+
 </RelativeLayout>

@@ -15,11 +15,11 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <ImageView
+        <ListView
+            android:layout_height="0dp"
+            android:id="@+id/listView"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:srcCompat="@drawable/memo"
-            android:id="@+id/imageView" />
+            android:layout_weight="1" />
 
         <Button
             android:text="メモを書く"
@@ -27,6 +27,9 @@
             android:layout_height="wrap_content"
             android:id="@+id/button"
             android:textColor="@android:color/background_dark"
-            android:onClick="memo" />
+            android:onClick="memo"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true" />
     </LinearLayout>
+
 </RelativeLayout>

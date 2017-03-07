@@ -6,34 +6,46 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 
-public class MemoActivity extends AppCompatActivity {
+public class NewMemoActivity extends AppCompatActivity {
 
     EditText titleEditText;
     EditText contentEditText;
+    SharedPreferences pref2;
     SharedPreferences pref;
-    static String number = "-1";
+    int contentsNumber;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_memo);
+
+
+        pref = getSharedPreferences("MemoPad",MODE_PRIVATE);
+        contentsNumber = pref.getInt("contentsNumber",0);
+
+        pref2 = getSharedPreferences(String.valueOf(contentsNumber),MODE_PRIVATE);
+
+
         titleEditText=(EditText)findViewById(R.id.title);
         contentEditText=(EditText)findViewById(R.id.content);
 
-        pref=getSharedPreferences(number,MODE_PRIVATE);
-
-        titleEditText.setText(pref.getString("key_title",""));
-        contentEditText.setText(pref.getString("key_content",""));
     }
     public void save(View v){
         String titleText=titleEditText.getText().toString();
         String contentText=contentEditText.getText().toString();
 
-        SharedPreferences.Editor editor=pref.edit();
-        editor.putString("key_title",titleText);
-        editor.putString("key_content",contentText);
-        editor.commit();
+        if(!(titleText.equals(""))) {
+            SharedPreferences.Editor editor2 = pref2.edit();
 
+            editor2.putString("key_title", titleText);
+            editor2.putString("key_content", contentText);
+            editor2.commit();
+
+            SharedPreferences.Editor editor = pref.edit();
+            editor.putInt("contentsNumber", contentsNumber + 1);
+            editor.commit();
+
+        }
 
         finish();
     }

@@ -16,7 +16,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".MemoActivity" />
-        <activity android:name=".ExplainActivity"></activity>
+        <activity android:name=".NewMemoActivity"></activity>
     </application>
 
 </manifest>
