@@ -30,6 +30,20 @@
             android:onClick="memo"
             android:layout_alignParentBottom="true"
             android:layout_alignParentStart="true" />
+
     </LinearLayout>
+
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="25dp"
+        android:layout_marginRight="25dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        app:backgroundTint="#ff4040"
+        android:onClick="fab"
+        android:src="@drawable/googleplus1" />
 
 </RelativeLayout>
