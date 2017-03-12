@@ -19,7 +19,6 @@ public class MainActivity extends AppCompatActivity {
     ListView listView;
     ArrayList<String> titleArray = new ArrayList<String>();
     ArrayAdapter<String> adapter;
-    HashMap<String, String> hashMap;
 
 
     @Override
@@ -65,11 +64,6 @@ public class MainActivity extends AppCompatActivity {
         });
 
         listView.setAdapter(adapter);
-    }
-
-    public void memo(View v) {
-        Intent intent = new Intent(this, NewMemoActivity.class);
-        startActivity(intent);
     }
 
 
