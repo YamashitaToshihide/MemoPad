@@ -49,4 +49,17 @@ public class NewMemoActivity extends AppCompatActivity {
 
         finish();
     }
+
+    public void deleat(View v){
+        String titleText=titleEditText.getText().toString();
+        String contentText=contentEditText.getText().toString();
+
+        if(!(titleText.equals(""))) {
+            SharedPreferences.Editor editor = pref.edit();
+            editor.remove("key_title");
+            editor.remove("key_content");
+            editor.commit();
+        }
+        finish();
+    }
 }

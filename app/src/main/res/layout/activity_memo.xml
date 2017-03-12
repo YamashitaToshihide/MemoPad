@@ -12,7 +12,9 @@
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true">
 
         <EditText
             android:layout_width="match_parent"
@@ -38,6 +40,9 @@
             android:id="@+id/content"
             android:hint="本文を入力してください" />
 
+        <Space android:layout_width="match_parent"
+            android:layout_height="10dip"/>
+
         <Button
             android:text="save"
             android:layout_width="match_parent"
@@ -46,6 +51,17 @@
             android:onClick="save"
             android:background="#6cbde6"
             android:textColor="@android:color/white" />
+
+        <Space android:layout_width="match_parent"
+            android:layout_height="15dip"/>
+
+        <Button
+            android:text="deleat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/button"
+            android:onClick="deleat"
+            android:background="#ffff4444" />
 
     </LinearLayout>
 
